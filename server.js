@@ -17,6 +17,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("🚀 Proxy server is running successfully!");
+});
+
 app.get("/api/googleProxy", async (req, res) => {
   const { endpoint, ...params } = req.query;
 
